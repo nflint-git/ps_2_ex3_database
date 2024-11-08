@@ -6,7 +6,7 @@ import click
 
 
 def kaggle_api_key(
-    user_name: str | None = None, api_key: str | None = None
+    user_name: str , api_key: str 
 ) -> None:
     """
     Function that takes the kaggle API key as input and saves it to
@@ -67,8 +67,8 @@ def kaggle_download_data(dataset: str) -> None:
 )  # type: ignore
 def main(
     dataset: str,
-    user_name: str | None = None,
-    api_key: str | None = None,
+    user_name: str,
+    api_key: str 
 ) -> None:
     kaggle_api_key(user_name=user_name, api_key=api_key)
     kaggle_download_data(dataset=dataset)
